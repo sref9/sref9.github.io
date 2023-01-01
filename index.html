@@ -1,0 +1,86 @@
+<script src="js/p5.js"> </script>
+<script src="js/p5.dom.js"> </script>
+<script src="js/p5.sound.js"> </script>
+<script src="js/script.js"> </script>
+<link rel="stylesheet" media='screen and (min-width: 961px)'href="css/desktop.css">
+<link rel="stylesheet" media='screen and (max-width: 960px)'href="css/movil.css">
+
+
+<div id="btnInfo">
+  <img id="imgInfo" src="css/imgInfo.png" style="cursor:pointer;"></img>
+</div>
+
+<div id="modalInfo" class="modal">
+  <div class="modal-content">
+    <div class="Info"> NoiseScape es una herramienta para simular el sonido del viento, pero con las propiedades de los intervalos y escalas musicales. Utilizando el teclado, se pueden activar las notas como si fueran teclas de piano, para obtener un viento tenebroso, triste, alegre, etc.
+      <br><br>Los controles permiten:
+      <br>- Modular la amplitud (Amp.), frecuencia (Freq.) y ancho de banda (Q) del oscilador.
+      <br>- Subir o bajar de octava (teclas Z y X).
+      <br>- Mantener las notas activas (C).
+      <br>- Grabar y descargar un archivo de audio.
+  <br><br> * App solo disponible para escritorio (por ahora).
+
+    </div>
+ </div>
+</div>
+<div class="grid">
+    <div class= "header">
+      <h1> NoiseScape </h1>
+      <h2> - a musical wind machine - </h2>
+    </div>
+    <div class= "sky">
+    <div class="keyboard">
+      <div class="keyboard__row">
+        <kbd class="keyboard__key keyboard__blank"></kbd>
+        <kbd class="keyboard__key" id= "key_W">W</kbd>
+        <kbd class="keyboard__key" id= "key_E">E</kbd>
+        <kbd class="keyboard__key keyboard__blank"></kbd>
+        <kbd class="keyboard__key keyboard__blank"></kbd>
+        <kbd class="keyboard__key" id= "key_T">T</kbd>
+        <kbd class="keyboard__key" id= "key_Y">Y</kbd>
+        <kbd class="keyboard__key" id= "key_U">U</kbd>
+        <kbd class="keyboard__key keyboard__blank"></kbd>
+      </div>
+      <div class="keyboard__row">
+        <kbd class="keyboard__key" id= "key_A">A</kbd>
+        <kbd class="keyboard__key" id= "key_S">S</kbd>
+        <kbd class="keyboard__key" id= "key_D">D</kbd>
+        <kbd class="keyboard__key" id= "key_F">F</kbd>
+        <kbd class="keyboard__key" id= "key_G">G</kbd>
+        <kbd class="keyboard__key" id= "key_H">H</kbd>
+        <kbd class="keyboard__key" id= "key_J">J</kbd>
+      </div>
+    </div>
+    </div>
+
+    <div class="piso">
+      <div class= "container">
+        <div class="cuadros">
+          <div class="cuadroT"> Octave </div>
+          <div class="cuadroV" id="octave"> 0 </div>
+          <div class="instr instrA"> - Z   X + </div>
+          <div class="cuadroT2"> Sustain </div>
+          <div class="cuadroV2" id="sustain"> Off </div>
+          <div class="instr2 instrA"> C </div>
+        </div>
+        <div class="cuadros">
+          <div class="cuadroT"> Amp. </div>
+          <div class="cuadroV" id="ampTxt"> 150 </div>
+          <input class="instr" id= "ampSldr" type= "range" step = "1" min= "0" max="500" value="150" onchange="lfoAmp()"></input>
+          <div class="cuadroT2"> Freq. </div>
+          <div class="cuadroV2" id="freqTxt"> 0.1 </div>
+          <input class="instr2" id= "freqSldr" type= "range" step = "0.01" min= "0" max="1" value="0.1" onchange="lfoFreq()"></input>
+        </div>
+        <div class="cuadros">
+          <div class="cuadroT"> Q </div>
+          <div class="cuadroV" id="qTxt"> 15 </div>
+          <input class="instr instrC" id= "qSldr" type= "range" min= "1" max="50" value="12" onchange="noiseQ()"></input>
+          <div class="cuadroT2"> Record </div>
+          <div class="cuadroV2 recBtn">
+            <button type = "button" id= "recBtn" onclick="clickRec()"> OFF </button>
+          </div>
+        <!--  <div class="instr2"> press </div> -->
+        </div>
+      </div>
+    </div>
+</div>
