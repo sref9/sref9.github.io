@@ -201,12 +201,11 @@ function keyReleased(){
 }
 
 class NoiseOsc {
-  let attackLevel = 0.3;
   constructor(freq, ampl, q) {
     this.osc = new p5.Noise();
     this.ampl = ampl;
     this.env = new p5.Env();
-    this.env.setADSR(2, 1, 0.3, 1);
+    this.env.setADSR(2, 5, 0.3, 1);
     this.env.setRange(0.3,0);
     this.osc.amp(this.env);
 
