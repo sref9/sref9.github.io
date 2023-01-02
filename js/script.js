@@ -232,7 +232,7 @@ class NoiseOsc {
 
   playNoise(){
     this.osc.start();
-    this.env.triggerAttack();
+    this.env.triggerAttack(0);
     if(sustainState == 1){
         oscArray.push(this);
     }
