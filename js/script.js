@@ -205,8 +205,8 @@ class NoiseOsc {
     this.osc = new p5.Noise();
     this.ampl = ampl;
     this.env = new p5.Env();
-    this.env.setADSR(0, 1, 1,2);
-    this.env.setRange(1,0);
+    this.env.setADSR(2, 1, 1,2);
+    this.env.setRange(1,1);
     this.osc.amp(this.env);
 
 
