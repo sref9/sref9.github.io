@@ -20,7 +20,7 @@ var btninfo = document.getElementById("btnInfo");
 }
 function setup() {
   octave = 0;
-  octaveStr = "0"
+  octaveStr = "0";
   root = 864;
   colorOff = "#728ca6";
   colorOn = "#4a6b8a";
