@@ -81,7 +81,7 @@ function keyPressed(){
       break;
 
     case "A":  //ROOT
-      osc1 = new NoiseOsc(root,0.4,filterQ);
+      osc1 = new NoiseOsc(root,0.3,filterQ);
       osc1.playNoise();
       document.getElementById("key_A").style.background = colorOn;
       break;
@@ -205,7 +205,7 @@ class NoiseOsc {
     this.osc = new p5.Noise();
     this.ampl = ampl;
     this.env = new p5.Env();
-    this.env.setADSR(0, 0, 0.3, 1);
+    this.env.setADSR(0, 0, 0.3, 0);
     this.env.setRange(0.3,0);
     this.osc.amp(this.env);
 
@@ -276,7 +276,7 @@ function clickRec(){
       document.getElementById("recBtn").innerHTML = "OFF";
       document.getElementById("recBtn").style.color = "#041e37";
       recorder.stop();
-      saveSound(soundFile, 'myNoise.wav');
+      saveSound(soundFile, 'myWind.wav');
       recState = 0;
   }
 }
