@@ -18,7 +18,7 @@ var btninfo = document.getElementById("btnInfo");
       }
   }
 }
-function setup() {
+{
   octave = 0;
   octaveStr = "0"
   root = 864;
